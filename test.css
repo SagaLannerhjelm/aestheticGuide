@@ -502,6 +502,14 @@ p.understand {
   .img {
     width: 50%;
   }
+  .gestalt-principle {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+  .emotions div {
+    width: 45%;
+    height: 35vw;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -519,7 +527,6 @@ p.understand {
       ". table-of-content ."
       ". main ."
       "footer footer footer";
-    background-color: #000000;
     width: 100vw;
   }
 
