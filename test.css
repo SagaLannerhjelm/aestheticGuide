@@ -1,0 +1,599 @@
+* {
+  margin: 0px;
+}
+
+body {
+  background-color: rgb(21, 21, 21);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 350px 1fr 200px;
+  grid-template-areas:
+    "header header header"
+    "table-of-content main main"
+    "footer footer footer";
+  height: auto;
+  background-color: rgb(21, 21, 21);
+}
+
+/*.ett {
+  background-color: rgb(81, 81, 81);
+  grid-area: header;
+}
+
+.tva {
+  background-color: rgb(255, 255, 255);
+  grid-area: main;
+}
+
+.tre {
+  background-color: rgb(46, 46, 46);
+  grid-area: footer;
+}
+
+.animate {
+  margin-top: 20px;
+  text-align: center;
+  color: beige;
+  font-size: 20pt;
+  animation-name: test;
+  animation-duration: 5s;
+  animation-iteration-count: 10;
+}
+
+@keyframes test {
+  0% {
+    color: blueviolet;
+    font-size: 18pt;
+  }
+  50% {
+    font-size: 25pt;
+  }
+  100% {
+    color: aqua;
+    font-size: 18pt;
+  }
+} */
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  grid-area: header;
+  background-color: rgb(21, 21, 21);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
+  color: rgb(214, 214, 214);
+}
+
+.table-of-content {
+  grid-area: table-of-content;
+  background-color: rgb(28, 28, 28);
+}
+
+.table-of-content-list {
+  margin-top: 2rem;
+}
+
+.accordion {
+  display: none;
+}
+
+main {
+  grid-area: main;
+  background-color: rgb(39, 39, 39);
+  border-radius: 5px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  padding-bottom: 80px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(21, 21, 21);
+}
+
+h1 {
+  font-size: 45pt;
+  margin-bottom: 10px;
+}
+
+h5 {
+  color: rgb(128, 128, 128);
+  font-size: 20pt;
+}
+
+.gray-image {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #cdcdcd;
+}
+
+.persona {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.gray-image:hover {
+  background-color: #ffffff;
+  animation-name: hover;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+
+.content {
+  /* margin: 60px 100px 20px 100px; */
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+.content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4em;
+  font-style: normal;
+  font-size: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.accent-color {
+  color: #b91b45;
+}
+
+.accent-color:hover {
+  color: #f36a8e;
+  cursor: pointer;
+}
+
+.content-link {
+  color: #b91b45;
+}
+
+.content-link:hover {
+  color: #f36a8e;
+  cursor: pointer;
+}
+
+/* list */
+
+.design-process {
+  line-height: 2rem;
+}
+
+.list-level-two {
+  font-size: 1rem;
+}
+
+.list-level-three {
+  color: #bbbbbb;
+}
+
+/* Choice grid */
+
+p.understand {
+  margin-bottom: 25px;
+}
+
+.choice-grid {
+  display: grid;
+  row-gap: 30px;
+  column-gap: 10vw;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  margin-bottom: 20px;
+  justify-items: left;
+}
+
+/* Help from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio 2022-11-19 */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  /* -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; */
+}
+
+/* Help from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio 2022-11-19 */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Help from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio 2022-11-19 */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #eee;
+  border-radius: 20%;
+}
+
+/* Help from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio 2022-11-19 */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* Help from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio 2022-11-19 */
+.container input:checked ~ .checkmark {
+  background-color: rgb(185, 27, 69);
+}
+
+/* Help from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio 2022-11-19 */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Help from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio 2022-11-19 */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Help from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio 2022-11-19 */
+.container .checkmark:after {
+  top: 8px;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 25%;
+  background: rgb(24, 24, 24);
+}
+
+/* Moodboard */
+
+.moodboard {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-top: 25px;
+  width: 100%;
+}
+
+/* Gestalt principles */
+
+.gestalt-principle-div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 25px;
+  width: 100%;
+}
+
+.gestalt-principle {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  align-items: center;
+}
+
+.gestalt-text {
+  margin-left: 8%;
+  margin-right: 5vw;
+}
+
+.gestalt-text h4 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/* color theory */
+
+.color-theory {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.img {
+  width: 33%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.img:hover {
+  animation-name: picture-background;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.img img {
+  width: 100%;
+}
+
+.img:hover img {
+  animation-name: picture-img;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.img-text {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  font-size: 1.7vw;
+  top: 45%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.img:hover .img-text {
+  visibility: visible;
+}
+
+.emotions.color-theory {
+  gap: 30px;
+}
+
+.emotions div {
+  height: 15vw;
+  width: 22%;
+}
+
+.color {
+  border-radius: 5px;
+}
+
+.red {
+  background-color: #ed3833;
+}
+
+.orange {
+  background-color: #f49f3f;
+}
+
+.yellow {
+  background-color: #fef04f;
+  color: #000000;
+}
+
+.green {
+  background-color: #54b62d;
+}
+
+.blue {
+  background-color: #1e6fc4;
+}
+
+.purple {
+  background-color: #7536b0;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.white {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.text-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 20%;
+  margin-left: 10%;
+  margin-right: 1fr;
+  margin-bottom: 100%;
+  margin-top: 3vw;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+/* Animation made with help by Beyond Fireship on youtube, youtube video "Subtle, yet Beautiful Animations" - 2022-11-19 */
+
+.emotion {
+  display: flex;
+}
+
+.emotion p {
+  margin-bottom: 0px;
+  font-size: 15pt;
+}
+
+.color-theory:hover .text-box:nth-child(2) {
+  transition-delay: 1s;
+  color: #fef04f;
+}
+
+/* .color:hover .emotion:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.color:hover .emotion-box:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.color:hover .emotion:nth-child(4) {
+  transition-delay: 600ms;
+} */
+
+.color:hover .text-box {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0);
+}
+
+.sources {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 5px;
+}
+
+.sources a {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.source {
+  font-size: 0.9rem;
+}
+
+@keyframes hover {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 104%;
+  }
+}
+
+@keyframes picture-background {
+  0% {
+    background-color: rgb(39, 39, 39);
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+@keyframes picture-img {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .img-text {
+    font-size: 16pt;
+  }
+  .img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 35px;
+  }
+  h5 {
+    font-size: 25px;
+  }
+  .grid-container {
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: 250px auto 1fr 200px;
+    grid-template-areas:
+      "header header header"
+      ". table-of-content ."
+      ". main ."
+      "footer footer footer";
+    background-color: #000000;
+    width: 100vw;
+  }
+
+  .gestalt-principle {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+
+  .gestalt-principle img {
+    width: 100%;
+  }
+
+  .img-text {
+    font-size: 13pt;
+  }
+  .img {
+    width: 100%;
+  }
+  .emotions div {
+    width: 100%;
+    height: 35vw;
+  }
+
+  .table-of-content .accordion {
+    background-color: rgb(39, 39, 39);
+  }
+
+  /* Made with help from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion 2022-11-19 */
+
+  .accordion {
+    color: rgb(185, 27, 69);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-weight: bold;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+    display: block;
+  }
+
+  .active,
+  .accordion:hover {
+    color: rgb(243, 106, 142);
+  }
+
+  .table-of-content-list {
+    display: none;
+    background-color: rgb(39, 39, 39);
+    overflow: hidden;
+    margin-top: 0;
+  }
+
+  .choice-grid {
+    column-gap: 0.2vw;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    justify-items: left;
+  }
+
+  .container {
+    font-size: 1rem;
+  }
+
+  .sources {
+    flex-wrap: wrap;
+  }
+
+  .sources a {
+    font-size: 1.2rem;
+  }
+}
