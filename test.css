@@ -18,45 +18,6 @@ body {
   background-color: rgb(21, 21, 21);
 }
 
-/*.ett {
-  background-color: rgb(81, 81, 81);
-  grid-area: header;
-}
-
-.tva {
-  background-color: rgb(255, 255, 255);
-  grid-area: main;
-}
-
-.tre {
-  background-color: rgb(46, 46, 46);
-  grid-area: footer;
-}
-
-.animate {
-  margin-top: 20px;
-  text-align: center;
-  color: beige;
-  font-size: 20pt;
-  animation-name: test;
-  animation-duration: 5s;
-  animation-iteration-count: 10;
-}
-
-@keyframes test {
-  0% {
-    color: blueviolet;
-    font-size: 18pt;
-  }
-  50% {
-    font-size: 25pt;
-  }
-  100% {
-    color: aqua;
-    font-size: 18pt;
-  }
-} */
-
 a {
   text-decoration: none;
 }
@@ -106,6 +67,10 @@ h1 {
   margin-bottom: 10px;
 }
 
+.sub-headline {
+  font-size: 1.5rem;
+}
+
 h5 {
   color: rgb(128, 128, 128);
   font-size: 20pt;
@@ -140,7 +105,15 @@ h5 {
 }
 
 .content h3 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+section {
+  margin-bottom: 3.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
 }
 
 .content p {
@@ -148,6 +121,9 @@ h5 {
   line-height: 1.4em;
   font-style: normal;
   font-size: 1rem;
+}
+
+.gestalt-text p {
   margin-bottom: 3.5rem;
 }
 
@@ -433,18 +409,6 @@ p.understand {
   color: #fef04f;
 }
 
-/* .color:hover .emotion:nth-child(2) {
-  transition-delay: 200ms;
-}
-
-.color:hover .emotion-box:nth-child(3) {
-  transition-delay: 400ms;
-}
-
-.color:hover .emotion:nth-child(4) {
-  transition-delay: 600ms;
-} */
-
 .color:hover .text-box {
   opacity: 1;
   filter: blur(0);
@@ -518,6 +482,9 @@ p.understand {
   }
   h5 {
     font-size: 25px;
+  }
+  .gestalt-text p {
+    margin-bottom: 1.5rem;
   }
   .grid-container {
     grid-template-columns: 20px 1fr 20px;
